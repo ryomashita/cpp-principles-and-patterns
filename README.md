@@ -1,12 +1,17 @@
-# cpp-principles-and-patterns
+# cpp-cmake-template
 
 ## About
-This repository is a collection of practical examples of [C++ Software Design: Design Principles and Patterns for High-Quality Software](https://www.oreilly.co.jp/books/9784814400454/).
+A template for C++ projects using CMake.
+This repository includes settings for the following tools:
++ [CMake](https://cmake.org/)
++ [Google Test](https://github.com/google/googletest)
++ [clang-format](https://clang.llvm.org/docs/ClangFormat.html)
++ [clang-tidy](https://clang.llvm.org/extra/clang-tidy/)
++ [VSCode](https://code.visualstudio.com/)
 
 ## Directoris
 The directory structure is based on [The Pitchfork Layout (PFL)](https://api.csswg.org/bikeshed/?force=1&url=https://raw.githubusercontent.com/vector-of-bool/pitchfork/develop/data/spec.bs).
-(But there are some differences.)
-(The unnecessary directories may be temporarily deleted.)
+(but there are some differences.)
 
 - `include/` : Contains public header files for users.
 - `src/` : Contains source files (including private header files and cmake scripts).
@@ -22,12 +27,6 @@ The following directories are not included in the repository, but these names ar
 - `build/` : Temporary build directory.
 - `install/` : Temporary install directory.
 
-## Template
-This repository is created from the template, [ryomashita/cpp-cmake-template](https://github.com/ryomashita/cpp-cmake-template).
-
-The tepmplate includes configurations for the following tools:
-+ [CMake](https://cmake.org/)
-+ [VSCode](https://code.visualstudio.com/)
-+ [Google Test](https://github.com/google/googletest)
-+ [clang-format](https://clang.llvm.org/docs/ClangFormat.html)
-+ [clang-tidy](https://clang.llvm.org/extra/clang-tidy/)
+If you want to add submodule projects, you need to add the following directories.
+- `lib/` : the root directory of the submodule projects.
+- `extra/` : the root directory of the submodule projects with some dependencies.
