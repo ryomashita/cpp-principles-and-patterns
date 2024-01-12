@@ -1,7 +1,7 @@
 # cpp-principles-and-patterns
 
 ## About
-This repository is a collection of practical examples of [C++ Software Design: Design Principles and Patterns for High-Quality Software](https://www.oreilly.co.jp/books/9784814400454/).
+This repository is a collection of practical examples of [C++ソフトウェア設計―高品質設計の原則とデザインパターン](https://www.oreilly.co.jp/books/9784814400454/) (原題: *C++ Software Design: Design Principles and Patterns for High-Quality Software*).
 
 ## Directoris
 The directory structure is based on [The Pitchfork Layout (PFL)](https://api.csswg.org/bikeshed/?force=1&url=https://raw.githubusercontent.com/vector-of-bool/pitchfork/develop/data/spec.bs).
