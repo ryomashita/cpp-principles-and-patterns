@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
 
-#include "Widget_Before.h"
+#include "Widget.h"
 
 namespace HowToTestPrivateMethod {
 

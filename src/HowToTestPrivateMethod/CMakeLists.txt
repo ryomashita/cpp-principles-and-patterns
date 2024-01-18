@@ -1,3 +1,7 @@
-add_library(Widget SHARED Widget_Before.h)
-set_target_properties(Widget PROPERTIES LINKER_LANGUAGE CXX)
-set_normal_compile_options(Widget)
+add_executable(WidgetBeforeTest ${CMAKE_CURRENT_SOURCE_DIR}/Before/WidgetTest.cpp)
+target_include_directories(WidgetBeforeTest PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/Before)
+enable_gtest(WidgetBeforeTest)
+
+add_executable(WidgetAfterTest ${CMAKE_CURRENT_SOURCE_DIR}/After/WidgetTest.cpp)
+target_include_directories(WidgetAfterTest PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/After)
+enable_gtest(WidgetAfterTest)
