@@ -1,1 +1,2 @@
 add_subdirectory(HowToTestPrivateMethod)
+add_subdirectory(FreeFunction)
