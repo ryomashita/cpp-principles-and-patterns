@@ -1,2 +1,3 @@
 add_subdirectory(HowToTestPrivateMethod)
 add_subdirectory(FreeFunction)
+add_subdirectory(Visitor)
