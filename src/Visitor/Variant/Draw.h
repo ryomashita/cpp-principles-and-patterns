@@ -3,7 +3,8 @@
 
 #include <numbers>
 
-#include "Shape.h"
+#include "Circle.h"
+#include "Square.h"
 
 // Visitor Pattern with std::variant :
 // 汎用的な処理の追加を抽象化するデザインパターン。

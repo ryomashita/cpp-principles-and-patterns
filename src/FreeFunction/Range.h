@@ -5,6 +5,8 @@
 // メンバ関数の追加は、既存コードを変更する必要がある上、追加できる型には制約がある。
 // フリー関数(非メンバ関数)であれば、制約なしにどんな型へも追加することができる。
 
+#include <iterator>
+
 namespace FreeFunction {
 
 // テンプレートパラメータ宣言の `typename` と `class`　は同じ意味。
@@ -12,6 +14,7 @@ namespace FreeFunction {
 // を使うことが多い。
 template <class Range, class Function>
 void traverseRange(Range const& range, Function const& function) {
+  // std::begin() と FreeFunction::begin() をディスパッチする。
   using std::begin;
   using std::end;
 

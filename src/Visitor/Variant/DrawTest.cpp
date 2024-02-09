@@ -3,7 +3,6 @@
 #include "Circle.h"
 #include "Draw.h"
 #include "DrawAllShapes.h"
-#include "Shape.h"
 #include "Square.h"
 
 using namespace visitor;
