@@ -5,6 +5,10 @@
 // メンバ関数の追加は、既存コードを変更する必要がある上、追加できる型には制約がある。
 // フリー関数(非メンバ関数)であれば、制約なしにどんな型へも追加することができる。
 
+// begin(), end(): (Guideline 24)
+// 任意の型のイテレータのインターフェースを、STLイテレータのインターフェースに変換する。
+// フリー関数であるため、どんな型にも追加できる。
+
 #include <iterator>
 
 namespace FreeFunction {
@@ -18,8 +22,10 @@ void traverseRange(Range const& range, Function const& function) {
   using std::begin;
   using std::end;
 
-  for (auto pos = begin(range); pos != end(range); ++pos) {
-    function(*pos);
+  auto first{begin(range)};
+  auto last{end(range)};
+  for (; first != last; ++first) {
+    function(*first);
   }
 }
 
