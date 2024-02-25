@@ -293,6 +293,8 @@ Command パターンでは、処理に関する全ての判断が Command オブ
 
 (197p, ガイドライン 25)
 
+#### CRTP パターン (Curiously Recurring Template Pattern; 奇妙に再帰したテンプレートパターン)
+
 #### デザインパターン比較表
 
 | パターン | バリエーションポイント | 型の追加     | 処理の追加   | 類似パターン |
@@ -300,3 +302,19 @@ Command パターンでは、処理に関する全ての判断が Command オブ
 | Visitor  | 処理の追加             | 容易ではない | 容易         | -            |
 | Strategy | 単一関数の実装詳細     | 容易         | 容易ではない | Command      |
 | Command  | 処理内容               | 容易         | 容易ではない | Strategy     |
+
+###　 Abbreviations
+
+- RAII : Resource Acquisition Is Initialization
+  - リソース獲得時初期化
+- ADL: Argument-Dependent Lookup
+  - 実引数依存の名前探索
+- CTAD: Class Template Argument Deduction
+  - クラステンプレートのテンプレート引数推論
+- SFINAE: Substitution Failure Is Not An Error
+  - 置換失敗はエラーとしない
+- NTTP: Non-Type Template Parameter
+  - 非型テンプレートパラメータ
+- IFNDR: Ill-Formed, No Diagnostic Required
+  - 厳密には誤りだが、診断は必要ない -　 SIOF: Static Initialization Order Fiasco
+  - 静的初期化順序の混乱
