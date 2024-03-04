@@ -1,7 +1,6 @@
-# Guideline 28 : Bridge Pattern (Pimpl Idiom)
+# Guideline 20 : Prototype Pattern
 
-# Pimpl
-# for details, see Person.h
+# for details, see Animals.h
 add_executable(AnimalsTest
   AnimalsTest.cpp
 )
