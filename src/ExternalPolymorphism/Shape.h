@@ -22,6 +22,11 @@ class ShapeConcept {
   virtual double draw() const = 0;
 };
 
+template <typename T, typename ShapeT>
+concept DrawStrategyConcept = requires(const T& strategy, const ShapeT& shape) {
+  { strategy(shape) } -> std::same_as<double>;
+};
+
 struct DefaultDrawer {
   template <typename ShapeT>
   double operator()(ShapeT const& shape) const {
@@ -29,7 +34,8 @@ struct DefaultDrawer {
   }
 };
 
-template <typename ShapeT, typename DrawStrategy = DefaultDrawer>
+template <typename ShapeT,
+          DrawStrategyConcept<ShapeT> DrawStrategy = DefaultDrawer>
 class ShapeModel : public ShapeConcept {
  public:
   explicit ShapeModel(ShapeT shape, DrawStrategy drawer)
