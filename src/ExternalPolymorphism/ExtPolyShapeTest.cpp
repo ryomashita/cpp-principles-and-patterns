@@ -11,19 +11,19 @@
 
 using namespace extpoly;
 
-TEST(StrategyValueTest, CircleDraw) {
+TEST(ExtPolyShapeTest, CircleDraw) {
   using CircleModel = ShapeModel<Circle, SpecificDrawStrategy>;
   CircleModel circle(Circle{5}, SpecificDrawStrategy());
   EXPECT_FLOAT_EQ(circle.draw(), 78.53981633974483);
 }
 
-TEST(StrategyValueTest, SquareDraw) {
+TEST(ExtPolyShapeTest, SquareDraw) {
   using SquareModel = ShapeModel<Square, SpecificDrawStrategy>;
   SquareModel square(Square{5}, SpecificDrawStrategy());
   EXPECT_FLOAT_EQ(square.draw(), 25);
 }
 
-TEST(StrategyValueTest, AllShapeDraw) {
+TEST(ExtPolyShapeTest, AllShapeDraw) {
   using Shapes = std::vector<std::unique_ptr<ShapeConcept>>;
   using CircleModel = ShapeModel<Circle, SpecificDrawStrategy>;
   using SquareModel = ShapeModel<Square, SpecificDrawStrategy>;
