@@ -11,15 +11,15 @@ target_include_directories(TypeErasureBaseTest
 set_normal_compile_options(TypeErasureBaseTest)
 enable_gtest(TypeErasureBaseTest)
 
-# Opt : Optimized Implementation of Type Erasure Pattern
-# SBO (Small Buffer Optimization) and
+# SBO : SBOimized Implementation of Type Erasure Pattern
+# SBO (Small Buffer SBOimization) and
 # manual vtable implementation
 # for details, see Shape.h
-add_executable(TypeErasureOptTest
-  ${CMAKE_CURRENT_SOURCE_DIR}/Opt/TypeErasureShapeTest.cpp
+add_executable(TypeErasureSBOTest
+  ${CMAKE_CURRENT_SOURCE_DIR}/SBO/TypeErasureShapeTest.cpp
 )
-target_include_directories(TypeErasureOptTest
-  PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/Opt
+target_include_directories(TypeErasureSBOTest
+  PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/SBO
 )
-set_normal_compile_options(TypeErasureOptTest)
-enable_gtest(TypeErasureOptTest)
+set_normal_compile_options(TypeErasureSBOTest)
+enable_gtest(TypeErasureSBOTest)
