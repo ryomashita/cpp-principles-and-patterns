@@ -12,8 +12,7 @@ set_normal_compile_options(TypeErasureBaseTest)
 enable_gtest(TypeErasureBaseTest)
 
 # SBO : SBOimized Implementation of Type Erasure Pattern
-# SBO (Small Buffer SBOimization) and
-# manual vtable implementation
+# SBO (Small Buffer SBOimization)
 # for details, see Shape.h
 add_executable(TypeErasureSBOTest
   ${CMAKE_CURRENT_SOURCE_DIR}/SBO/TypeErasureShapeTest.cpp
@@ -23,3 +22,15 @@ target_include_directories(TypeErasureSBOTest
 )
 set_normal_compile_options(TypeErasureSBOTest)
 enable_gtest(TypeErasureSBOTest)
+
+# MVD : Optimized Implementation of Type Erasure Pattern
+# Manual Virtual Function Dispatching
+# for details, see Shape.h
+add_executable(TypeErasureMVDTest
+  ${CMAKE_CURRENT_SOURCE_DIR}/ManualVirtualDispatch/TypeErasureShapeTest.cpp
+)
+target_include_directories(TypeErasureMVDTest
+  PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/ManualVirtualDispatch
+)
+set_normal_compile_options(TypeErasureMVDTest)
+enable_gtest(TypeErasureMVDTest)
