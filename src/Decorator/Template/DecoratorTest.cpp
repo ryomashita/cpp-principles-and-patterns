@@ -2,7 +2,7 @@
 
 #include "ConferenceTicket.h"
 #include "Money.h"
-#include "PricedItems.h"
+#include "PricedItems.h"  // IWYU pragma: keep
 
 using namespace decorator;
 
@@ -19,7 +19,7 @@ TEST(DecoratorTemplateTest, Money) {
 TEST(DecoratorTemplateTest, PricedItem) {
   ConferenceTicket ticket{"item", Money{500}};
 
-  Taxed<0.15, Discounted<0.2, ConferenceTicket>> item{"item", Money{500}};
+  Taxed<0.08, Discounted<0.2, ConferenceTicket>> item{"item", Money{500}};
 
-  EXPECT_EQ(item.price(), Money{500 * 0.8 * 1.15});
+  EXPECT_EQ(item.price(), Money{500 * 0.8 * 1.08});
 }
